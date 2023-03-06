@@ -221,6 +221,9 @@ vcom -work proc_sys_reset_v5_0_13  -93 \
 vcom -work xil_defaultlib  -93 \
 "../../../../MicroBlazeIP.gen/sources_1/bd/MicroBlazeIP/ip/MicroBlazeIP_rst_mig_7series_0_81M_0/sim/MicroBlazeIP_rst_mig_7series_0_81M_0.vhd" \
 
+vlog -work xil_defaultlib  -incr -mfcu "+incdir+../../../../MicroBlazeIP.gen/sources_1/bd/MicroBlazeIP/ipshared/f0b6/hdl/verilog" "+incdir+../../../../MicroBlazeIP.gen/sources_1/bd/MicroBlazeIP/ipshared/66be/hdl/verilog" "+incdir+../../../../MicroBlazeIP.gen/sources_1/bd/MicroBlazeIP/ipshared/ec67/hdl" "+incdir+C:/Xilinx/Vivado/2022.1/data/xilinx_vip/include" \
+"../../../../MicroBlazeIP.gen/sources_1/bd/MicroBlazeIP/ip/MicroBlazeIP_axi_smc_0/bd_0/sim/bd_aa28.v" \
+
 vlog -work xlconstant_v1_1_7  -incr -mfcu "+incdir+../../../../MicroBlazeIP.gen/sources_1/bd/MicroBlazeIP/ipshared/f0b6/hdl/verilog" "+incdir+../../../../MicroBlazeIP.gen/sources_1/bd/MicroBlazeIP/ipshared/66be/hdl/verilog" "+incdir+../../../../MicroBlazeIP.gen/sources_1/bd/MicroBlazeIP/ipshared/ec67/hdl" "+incdir+C:/Xilinx/Vivado/2022.1/data/xilinx_vip/include" \
 "../../../../MicroBlazeIP.gen/sources_1/bd/MicroBlazeIP/ipshared/fcfc/hdl/xlconstant_v1_1_vl_rfs.v" \
 
@@ -298,9 +301,6 @@ vlog -work smartconnect_v1_0  -incr -mfcu -sv -L axi_vip_v1_1_12 -L smartconnect
 vlog -work xil_defaultlib  -incr -mfcu -sv -L axi_vip_v1_1_12 -L smartconnect_v1_0 -L xilinx_vip "+incdir+../../../../MicroBlazeIP.gen/sources_1/bd/MicroBlazeIP/ipshared/f0b6/hdl/verilog" "+incdir+../../../../MicroBlazeIP.gen/sources_1/bd/MicroBlazeIP/ipshared/66be/hdl/verilog" "+incdir+../../../../MicroBlazeIP.gen/sources_1/bd/MicroBlazeIP/ipshared/ec67/hdl" "+incdir+C:/Xilinx/Vivado/2022.1/data/xilinx_vip/include" \
 "../../../../MicroBlazeIP.gen/sources_1/bd/MicroBlazeIP/ip/MicroBlazeIP_axi_smc_0/bd_0/ip/ip_28/sim/bd_aa28_m00e_0.sv" \
 
-vlog -work xil_defaultlib  -incr -mfcu "+incdir+../../../../MicroBlazeIP.gen/sources_1/bd/MicroBlazeIP/ipshared/f0b6/hdl/verilog" "+incdir+../../../../MicroBlazeIP.gen/sources_1/bd/MicroBlazeIP/ipshared/66be/hdl/verilog" "+incdir+../../../../MicroBlazeIP.gen/sources_1/bd/MicroBlazeIP/ipshared/ec67/hdl" "+incdir+C:/Xilinx/Vivado/2022.1/data/xilinx_vip/include" \
-"../../../../MicroBlazeIP.gen/sources_1/bd/MicroBlazeIP/ip/MicroBlazeIP_axi_smc_0/bd_0/sim/bd_aa28.v" \
-
 vlog -work axi_infrastructure_v1_1_0  -incr -mfcu "+incdir+../../../../MicroBlazeIP.gen/sources_1/bd/MicroBlazeIP/ipshared/f0b6/hdl/verilog" "+incdir+../../../../MicroBlazeIP.gen/sources_1/bd/MicroBlazeIP/ipshared/66be/hdl/verilog" "+incdir+../../../../MicroBlazeIP.gen/sources_1/bd/MicroBlazeIP/ipshared/ec67/hdl" "+incdir+C:/Xilinx/Vivado/2022.1/data/xilinx_vip/include" \
 "../../../../MicroBlazeIP.gen/sources_1/bd/MicroBlazeIP/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v" \
 
@@ -365,6 +365,9 @@ vcom -work xil_defaultlib  -93 \
 vlog -work xil_defaultlib  -incr -mfcu "+incdir+../../../../MicroBlazeIP.gen/sources_1/bd/MicroBlazeIP/ipshared/f0b6/hdl/verilog" "+incdir+../../../../MicroBlazeIP.gen/sources_1/bd/MicroBlazeIP/ipshared/66be/hdl/verilog" "+incdir+../../../../MicroBlazeIP.gen/sources_1/bd/MicroBlazeIP/ipshared/ec67/hdl" "+incdir+C:/Xilinx/Vivado/2022.1/data/xilinx_vip/include" \
 "../../../../MicroBlazeIP.gen/sources_1/bd/MicroBlazeIP/ip/MicroBlazeIP_pwm_gen_0_0/sim/MicroBlazeIP_pwm_gen_0_0.v" \
 "../../../../MicroBlazeIP.gen/sources_1/bd/MicroBlazeIP/sim/MicroBlazeIP.v" \
+"../../../../MicroBlazeIP.gen/sources_1/bd/MicroBlazeIP/ipshared/59f3/hdl/CustomPWM_v1_0_S00_AXI.v" \
+"../../../../MicroBlazeIP.gen/sources_1/bd/MicroBlazeIP/ipshared/59f3/hdl/CustomPWM_v1_0.v" \
+"../../../../MicroBlazeIP.gen/sources_1/bd/MicroBlazeIP/ip/MicroBlazeIP_CustomPWM_0_0/sim/MicroBlazeIP_CustomPWM_0_0.v" \
 
 vlog -work xil_defaultlib \
 "glbl.v"

@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-| Date             : Sun Mar  5 18:49:32 2023
+| Date             : Sun Mar  5 20:02:59 2023
 | Host             : DESKTOP-E8T5E0M running 64-bit major release  (build 9200)
 | Command          : report_power -file MicroBlazeIP_wrapper_power_routed.rpt -pb MicroBlazeIP_wrapper_power_summary_routed.pb -rpx MicroBlazeIP_wrapper_power_routed.rpx
 | Design           : MicroBlazeIP_wrapper
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.801        |
+| Total On-Chip Power (W)  | 0.805        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.696        |
+| Dynamic (W)              | 0.700        |
 | Device Static (W)        | 0.105        |
 | Effective TJA (C/W)      | 4.6          |
 | Max Ambient (C)          | 81.3         |
@@ -52,24 +52,24 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.045 |       25 |       --- |             --- |
-| Slice Logic              |     0.018 |    25891 |       --- |             --- |
-|   LUT as Logic           |     0.015 |     8323 |     63400 |           13.13 |
+| Clocks                   |     0.043 |       25 |       --- |             --- |
+| Slice Logic              |     0.020 |    26274 |       --- |             --- |
+|   LUT as Logic           |     0.016 |     8461 |     63400 |           13.35 |
 |   LUT as Distributed RAM |     0.002 |     1262 |     19000 |            6.64 |
-|   Register               |     0.001 |    10724 |    126800 |            8.46 |
-|   CARRY4                 |    <0.001 |      193 |     15850 |            1.22 |
+|   Register               |     0.001 |    10905 |    126800 |            8.60 |
+|   CARRY4                 |    <0.001 |      213 |     15850 |            1.34 |
 |   LUT as Shift Register  |    <0.001 |      431 |     19000 |            2.27 |
 |   F7/F8 Muxes            |    <0.001 |      156 |     63400 |            0.25 |
-|   Others                 |    <0.001 |     1020 |       --- |             --- |
-| Signals                  |     0.024 |    18299 |       --- |             --- |
-| Block RAM                |     0.018 |        8 |       135 |            5.93 |
+|   Others                 |    <0.001 |     1022 |       --- |             --- |
+| Signals                  |     0.026 |    18539 |       --- |             --- |
+| Block RAM                |     0.020 |        8 |       135 |            5.93 |
 | MMCM                     |     0.098 |        1 |         6 |           16.67 |
 | PLL                      |     0.115 |        1 |         6 |           16.67 |
-| I/O                      |     0.263 |       63 |       210 |           30.00 |
+| I/O                      |     0.263 |       67 |       210 |           31.90 |
 | PHASER                   |     0.110 |       14 |       --- |             --- |
 | XADC                     |     0.004 |        1 |       --- |             --- |
 | Static Power             |     0.105 |          |           |                 |
-| Total                    |     0.801 |          |           |                 |
+| Total                    |     0.805 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -79,8 +79,8 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.158 |       0.141 |      0.017 |       NA    | Unspecified | NA         |
-| Vccaux    |       1.800 |     0.235 |       0.216 |      0.018 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.161 |       0.144 |      0.017 |       NA    | Unspecified | NA         |
+| Vccaux    |       1.800 |     0.235 |       0.217 |      0.018 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.005 |       0.001 |      0.004 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -170,16 +170,16 @@ Table of Contents
 +------------------------------------------+-----------+
 | Name                                     | Power (W) |
 +------------------------------------------+-----------+
-| MicroBlazeIP_wrapper                     |     0.696 |
-|   MicroBlazeIP_i                         |     0.692 |
+| MicroBlazeIP_wrapper                     |     0.700 |
+|   MicroBlazeIP_i                         |     0.696 |
 |     axi_iic_0                            |     0.002 |
 |       U0                                 |     0.002 |
-|     axi_smc                              |     0.035 |
-|       inst                               |     0.035 |
-|     microblaze_0                         |     0.032 |
-|       U0                                 |     0.032 |
-|     mig_7series_0                        |     0.620 |
-|       u_MicroBlazeIP_mig_7series_0_0_mig |     0.618 |
+|     axi_smc                              |     0.034 |
+|       inst                               |     0.034 |
+|     microblaze_0                         |     0.034 |
+|       U0                                 |     0.034 |
+|     mig_7series_0                        |     0.622 |
+|       u_MicroBlazeIP_mig_7series_0_0_mig |     0.620 |
 +------------------------------------------+-----------+
 
 

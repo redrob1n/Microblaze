@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1678063475">
+<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1678067890">
   <File Type="ROUTE-PWR" Name="MicroBlazeIP_wrapper_power_routed.rpt"/>
   <File Type="PA-TCL" Name="MicroBlazeIP_wrapper.tcl"/>
   <File Type="BITSTR-MMI" Name="MicroBlazeIP_wrapper.mmi"/>
@@ -154,7 +154,7 @@
     <Step Id="write_bitstream"/>
   </Strategy>
   <BlockFileSet Type="BlockSrcs" Name="MicroBlazeIP_axi_iic_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="MicroBlazeIP_xbar_0"/>
   <BlockFileSet Type="BlockSrcs" Name="MicroBlazeIP_mig_7series_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="MicroBlazeIP_pwm_gen_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="MicroBlazeIP_CustomPWM_0_0"/>
 </GenRun>

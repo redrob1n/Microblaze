@@ -1,10 +1,10 @@
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
--- Date        : Sun Mar  5 18:45:22 2023
+-- Date        : Sun Mar  5 17:13:33 2023
 -- Host        : DESKTOP-E8T5E0M running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub
---               c:/Users/redrob1n/VivadoProjects/MicroBlazeIP/MicroBlazeIP.gen/sources_1/bd/MicroBlazeIP/ip/MicroBlazeIP_xbar_0/MicroBlazeIP_xbar_0_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top MicroBlazeIP_xbar_0 -prefix
+--               MicroBlazeIP_xbar_0_ MicroBlazeIP_xbar_0_stub.vhdl
 -- Design      : MicroBlazeIP_xbar_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7a100tcsg324-1

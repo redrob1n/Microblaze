@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1678063472" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/MicroBlazeIP_wrapper.dcp">
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1678067888" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/MicroBlazeIP_wrapper.dcp">
   <File Type="PA-TCL" Name="MicroBlazeIP_wrapper.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="MicroBlazeIP_wrapper_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="MicroBlazeIP_wrapper_reports.tcl"/>
@@ -76,7 +76,7 @@
     <Step Id="synth_design"/>
   </Strategy>
   <BlockFileSet Type="BlockSrcs" Name="MicroBlazeIP_axi_iic_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="MicroBlazeIP_xbar_0"/>
   <BlockFileSet Type="BlockSrcs" Name="MicroBlazeIP_mig_7series_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="MicroBlazeIP_pwm_gen_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="MicroBlazeIP_CustomPWM_0_0"/>
 </GenRun>

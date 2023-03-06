@@ -1,7 +1,7 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-// Date        : Wed Mar  1 21:18:25 2023
+// Date        : Wed Mar  1 22:22:29 2023
 // Host        : DESKTOP-E8T5E0M running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               c:/Users/redrob1n/VivadoProjects/MicroBlazeIP/MicroBlazeIP.gen/sources_1/bd/MicroBlazeIP/ip/MicroBlazeIP_pwm_gen_0_0/MicroBlazeIP_pwm_gen_0_0_sim_netlist.v
@@ -20,7 +20,7 @@ module MicroBlazeIP_pwm_gen_0_0
     increase_duty,
     decrease_duty,
     pwm_out);
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN MicroBlazeIP_sys_clk_i1, INSERT_VIP 0" *) input clk;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN MicroBlazeIP_sys_clk_i, INSERT_VIP 0" *) input clk;
   input increase_duty;
   input decrease_duty;
   output pwm_out;
@@ -40,11 +40,13 @@ module MicroBlazeIP_pwm_gen_0_0_pwm_gen
   output pwm_out;
   input clk;
 
-  wire clear;
   wire clk;
+  wire \pwm_cnt[0]_i_1_n_0 ;
   wire \pwm_cnt[0]_i_3_n_0 ;
   wire \pwm_cnt[0]_i_4_n_0 ;
   wire \pwm_cnt[0]_i_5_n_0 ;
+  wire \pwm_cnt[0]_i_6_n_0 ;
+  wire \pwm_cnt[0]_i_7_n_0 ;
   wire [15:0]pwm_cnt_reg;
   wire \pwm_cnt_reg[0]_i_2_n_0 ;
   wire \pwm_cnt_reg[0]_i_2_n_1 ;
@@ -83,36 +85,49 @@ module MicroBlazeIP_pwm_gen_0_0_pwm_gen
   wire [3:3]\NLW_pwm_cnt_reg[12]_i_1_CO_UNCONNECTED ;
 
   LUT6 #(
-    .INIT(64'h0000FF80FFFFFFFF)) 
+    .INIT(64'hFFA8A8A8FFFFFFFF)) 
     \pwm_cnt[0]_i_1 
-       (.I0(pwm_cnt_reg[2]),
-        .I1(pwm_cnt_reg[1]),
-        .I2(pwm_cnt_reg[0]),
-        .I3(\pwm_cnt[0]_i_3_n_0 ),
-        .I4(\pwm_cnt[0]_i_4_n_0 ),
-        .I5(pwm_out_INST_0_i_1_n_0),
-        .O(clear));
+       (.I0(\pwm_cnt[0]_i_3_n_0 ),
+        .I1(pwm_out_INST_0_i_1_n_0),
+        .I2(\pwm_cnt[0]_i_4_n_0 ),
+        .I3(\pwm_cnt[0]_i_5_n_0 ),
+        .I4(pwm_cnt_reg[13]),
+        .I5(\pwm_cnt[0]_i_6_n_0 ),
+        .O(\pwm_cnt[0]_i_1_n_0 ));
+  LUT4 #(
+    .INIT(16'h8000)) 
+    \pwm_cnt[0]_i_3 
+       (.I0(pwm_cnt_reg[8]),
+        .I1(pwm_cnt_reg[13]),
+        .I2(pwm_cnt_reg[10]),
+        .I3(pwm_cnt_reg[9]),
+        .O(\pwm_cnt[0]_i_3_n_0 ));
+  LUT4 #(
+    .INIT(16'h8000)) 
+    \pwm_cnt[0]_i_4 
+       (.I0(pwm_cnt_reg[1]),
+        .I1(pwm_cnt_reg[0]),
+        .I2(pwm_cnt_reg[3]),
+        .I3(pwm_cnt_reg[2]),
+        .O(\pwm_cnt[0]_i_4_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT2 #(
     .INIT(4'hE)) 
-    \pwm_cnt[0]_i_3 
-       (.I0(pwm_cnt_reg[4]),
-        .I1(pwm_cnt_reg[3]),
-        .O(\pwm_cnt[0]_i_3_n_0 ));
-  LUT5 #(
-    .INIT(32'h7FFFFFFF)) 
-    \pwm_cnt[0]_i_4 
-       (.I0(pwm_cnt_reg[7]),
-        .I1(pwm_cnt_reg[8]),
-        .I2(pwm_cnt_reg[9]),
-        .I3(pwm_cnt_reg[6]),
-        .I4(pwm_cnt_reg[5]),
-        .O(\pwm_cnt[0]_i_4_n_0 ));
+    \pwm_cnt[0]_i_5 
+       (.I0(pwm_cnt_reg[11]),
+        .I1(pwm_cnt_reg[12]),
+        .O(\pwm_cnt[0]_i_5_n_0 ));
+  LUT2 #(
+    .INIT(4'h1)) 
+    \pwm_cnt[0]_i_6 
+       (.I0(pwm_cnt_reg[14]),
+        .I1(pwm_cnt_reg[15]),
+        .O(\pwm_cnt[0]_i_6_n_0 ));
   LUT1 #(
     .INIT(2'h1)) 
-    \pwm_cnt[0]_i_5 
+    \pwm_cnt[0]_i_7 
        (.I0(pwm_cnt_reg[0]),
-        .O(\pwm_cnt[0]_i_5_n_0 ));
+        .O(\pwm_cnt[0]_i_7_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \pwm_cnt_reg[0] 
@@ -120,7 +135,7 @@ module MicroBlazeIP_pwm_gen_0_0_pwm_gen
         .CE(1'b1),
         .D(\pwm_cnt_reg[0]_i_2_n_7 ),
         .Q(pwm_cnt_reg[0]),
-        .R(clear));
+        .R(\pwm_cnt[0]_i_1_n_0 ));
   (* ADDER_THRESHOLD = "11" *) 
   CARRY4 \pwm_cnt_reg[0]_i_2 
        (.CI(1'b0),
@@ -128,7 +143,7 @@ module MicroBlazeIP_pwm_gen_0_0_pwm_gen
         .CYINIT(1'b0),
         .DI({1'b0,1'b0,1'b0,1'b1}),
         .O({\pwm_cnt_reg[0]_i_2_n_4 ,\pwm_cnt_reg[0]_i_2_n_5 ,\pwm_cnt_reg[0]_i_2_n_6 ,\pwm_cnt_reg[0]_i_2_n_7 }),
-        .S({pwm_cnt_reg[3:1],\pwm_cnt[0]_i_5_n_0 }));
+        .S({pwm_cnt_reg[3:1],\pwm_cnt[0]_i_7_n_0 }));
   FDRE #(
     .INIT(1'b0)) 
     \pwm_cnt_reg[10] 
@@ -136,7 +151,7 @@ module MicroBlazeIP_pwm_gen_0_0_pwm_gen
         .CE(1'b1),
         .D(\pwm_cnt_reg[8]_i_1_n_5 ),
         .Q(pwm_cnt_reg[10]),
-        .R(clear));
+        .R(\pwm_cnt[0]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \pwm_cnt_reg[11] 
@@ -144,7 +159,7 @@ module MicroBlazeIP_pwm_gen_0_0_pwm_gen
         .CE(1'b1),
         .D(\pwm_cnt_reg[8]_i_1_n_4 ),
         .Q(pwm_cnt_reg[11]),
-        .R(clear));
+        .R(\pwm_cnt[0]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \pwm_cnt_reg[12] 
@@ -152,7 +167,7 @@ module MicroBlazeIP_pwm_gen_0_0_pwm_gen
         .CE(1'b1),
         .D(\pwm_cnt_reg[12]_i_1_n_7 ),
         .Q(pwm_cnt_reg[12]),
-        .R(clear));
+        .R(\pwm_cnt[0]_i_1_n_0 ));
   (* ADDER_THRESHOLD = "11" *) 
   CARRY4 \pwm_cnt_reg[12]_i_1 
        (.CI(\pwm_cnt_reg[8]_i_1_n_0 ),
@@ -168,7 +183,7 @@ module MicroBlazeIP_pwm_gen_0_0_pwm_gen
         .CE(1'b1),
         .D(\pwm_cnt_reg[12]_i_1_n_6 ),
         .Q(pwm_cnt_reg[13]),
-        .R(clear));
+        .R(\pwm_cnt[0]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \pwm_cnt_reg[14] 
@@ -176,7 +191,7 @@ module MicroBlazeIP_pwm_gen_0_0_pwm_gen
         .CE(1'b1),
         .D(\pwm_cnt_reg[12]_i_1_n_5 ),
         .Q(pwm_cnt_reg[14]),
-        .R(clear));
+        .R(\pwm_cnt[0]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \pwm_cnt_reg[15] 
@@ -184,7 +199,7 @@ module MicroBlazeIP_pwm_gen_0_0_pwm_gen
         .CE(1'b1),
         .D(\pwm_cnt_reg[12]_i_1_n_4 ),
         .Q(pwm_cnt_reg[15]),
-        .R(clear));
+        .R(\pwm_cnt[0]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \pwm_cnt_reg[1] 
@@ -192,7 +207,7 @@ module MicroBlazeIP_pwm_gen_0_0_pwm_gen
         .CE(1'b1),
         .D(\pwm_cnt_reg[0]_i_2_n_6 ),
         .Q(pwm_cnt_reg[1]),
-        .R(clear));
+        .R(\pwm_cnt[0]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \pwm_cnt_reg[2] 
@@ -200,7 +215,7 @@ module MicroBlazeIP_pwm_gen_0_0_pwm_gen
         .CE(1'b1),
         .D(\pwm_cnt_reg[0]_i_2_n_5 ),
         .Q(pwm_cnt_reg[2]),
-        .R(clear));
+        .R(\pwm_cnt[0]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \pwm_cnt_reg[3] 
@@ -208,7 +223,7 @@ module MicroBlazeIP_pwm_gen_0_0_pwm_gen
         .CE(1'b1),
         .D(\pwm_cnt_reg[0]_i_2_n_4 ),
         .Q(pwm_cnt_reg[3]),
-        .R(clear));
+        .R(\pwm_cnt[0]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \pwm_cnt_reg[4] 
@@ -216,7 +231,7 @@ module MicroBlazeIP_pwm_gen_0_0_pwm_gen
         .CE(1'b1),
         .D(\pwm_cnt_reg[4]_i_1_n_7 ),
         .Q(pwm_cnt_reg[4]),
-        .R(clear));
+        .R(\pwm_cnt[0]_i_1_n_0 ));
   (* ADDER_THRESHOLD = "11" *) 
   CARRY4 \pwm_cnt_reg[4]_i_1 
        (.CI(\pwm_cnt_reg[0]_i_2_n_0 ),
@@ -232,7 +247,7 @@ module MicroBlazeIP_pwm_gen_0_0_pwm_gen
         .CE(1'b1),
         .D(\pwm_cnt_reg[4]_i_1_n_6 ),
         .Q(pwm_cnt_reg[5]),
-        .R(clear));
+        .R(\pwm_cnt[0]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \pwm_cnt_reg[6] 
@@ -240,7 +255,7 @@ module MicroBlazeIP_pwm_gen_0_0_pwm_gen
         .CE(1'b1),
         .D(\pwm_cnt_reg[4]_i_1_n_5 ),
         .Q(pwm_cnt_reg[6]),
-        .R(clear));
+        .R(\pwm_cnt[0]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \pwm_cnt_reg[7] 
@@ -248,7 +263,7 @@ module MicroBlazeIP_pwm_gen_0_0_pwm_gen
         .CE(1'b1),
         .D(\pwm_cnt_reg[4]_i_1_n_4 ),
         .Q(pwm_cnt_reg[7]),
-        .R(clear));
+        .R(\pwm_cnt[0]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \pwm_cnt_reg[8] 
@@ -256,7 +271,7 @@ module MicroBlazeIP_pwm_gen_0_0_pwm_gen
         .CE(1'b1),
         .D(\pwm_cnt_reg[8]_i_1_n_7 ),
         .Q(pwm_cnt_reg[8]),
-        .R(clear));
+        .R(\pwm_cnt[0]_i_1_n_0 ));
   (* ADDER_THRESHOLD = "11" *) 
   CARRY4 \pwm_cnt_reg[8]_i_1 
        (.CI(\pwm_cnt_reg[4]_i_1_n_0 ),
@@ -272,35 +287,34 @@ module MicroBlazeIP_pwm_gen_0_0_pwm_gen
         .CE(1'b1),
         .D(\pwm_cnt_reg[8]_i_1_n_6 ),
         .Q(pwm_cnt_reg[9]),
-        .R(clear));
-  LUT6 #(
-    .INIT(64'h0000000000000002)) 
+        .R(\pwm_cnt[0]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  LUT5 #(
+    .INIT(32'h00010000)) 
     pwm_out_INST_0
        (.I0(pwm_out_INST_0_i_1_n_0),
-        .I1(pwm_out_INST_0_i_2_n_0),
-        .I2(pwm_cnt_reg[5]),
-        .I3(pwm_cnt_reg[6]),
-        .I4(pwm_cnt_reg[8]),
-        .I5(pwm_cnt_reg[2]),
+        .I1(pwm_cnt_reg[12]),
+        .I2(pwm_cnt_reg[11]),
+        .I3(pwm_cnt_reg[3]),
+        .I4(pwm_out_INST_0_i_2_n_0),
         .O(pwm_out));
-  LUT6 #(
-    .INIT(64'h0000000000000001)) 
-    pwm_out_INST_0_i_1
-       (.I0(pwm_cnt_reg[11]),
-        .I1(pwm_cnt_reg[10]),
-        .I2(pwm_cnt_reg[12]),
-        .I3(pwm_cnt_reg[15]),
-        .I4(pwm_cnt_reg[13]),
-        .I5(pwm_cnt_reg[14]),
-        .O(pwm_out_INST_0_i_1_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT4 #(
     .INIT(16'hFFFE)) 
-    pwm_out_INST_0_i_2
-       (.I0(pwm_cnt_reg[3]),
+    pwm_out_INST_0_i_1
+       (.I0(pwm_cnt_reg[5]),
         .I1(pwm_cnt_reg[4]),
         .I2(pwm_cnt_reg[7]),
+        .I3(pwm_cnt_reg[6]),
+        .O(pwm_out_INST_0_i_1_n_0));
+  LUT6 #(
+    .INIT(64'h0000000000000001)) 
+    pwm_out_INST_0_i_2
+       (.I0(pwm_cnt_reg[10]),
+        .I1(pwm_cnt_reg[13]),
+        .I2(pwm_cnt_reg[8]),
         .I3(pwm_cnt_reg[9]),
+        .I4(pwm_cnt_reg[15]),
+        .I5(pwm_cnt_reg[14]),
         .O(pwm_out_INST_0_i_2_n_0));
 endmodule
 `ifndef GLBL

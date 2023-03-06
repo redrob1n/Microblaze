@@ -57,4 +57,7 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==MicroBlazeI
 # IP: bd/MicroBlazeIP/ip/MicroBlazeIP_pwm_gen_0_0/MicroBlazeIP_pwm_gen_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==MicroBlazeIP_pwm_gen_0_0 || ORIG_REF_NAME==MicroBlazeIP_pwm_gen_0_0} -quiet] -quiet
 
+# IP: bd/MicroBlazeIP/ip/MicroBlazeIP_CustomPWM_0_0/MicroBlazeIP_CustomPWM_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==MicroBlazeIP_CustomPWM_0_0 || ORIG_REF_NAME==MicroBlazeIP_CustomPWM_0_0} -quiet] -quiet
+
 # XDC: c:/Users/redrob1n/VivadoProjects/MicroBlazeIP/MicroBlazeIP.gen/sources_1/bd/MicroBlazeIP/MicroBlazeIP_ooc.xdc

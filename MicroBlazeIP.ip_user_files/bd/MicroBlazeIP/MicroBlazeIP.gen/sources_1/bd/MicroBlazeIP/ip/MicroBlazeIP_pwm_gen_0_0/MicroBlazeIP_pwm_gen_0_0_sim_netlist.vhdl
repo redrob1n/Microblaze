@@ -1,7 +1,7 @@
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
--- Date        : Wed Mar  1 21:18:25 2023
+-- Date        : Wed Mar  1 22:22:29 2023
 -- Host        : DESKTOP-E8T5E0M running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
 --               c:/Users/redrob1n/VivadoProjects/MicroBlazeIP/MicroBlazeIP.gen/sources_1/bd/MicroBlazeIP/ip/MicroBlazeIP_pwm_gen_0_0/MicroBlazeIP_pwm_gen_0_0_sim_netlist.vhdl
@@ -24,10 +24,12 @@ entity MicroBlazeIP_pwm_gen_0_0_pwm_gen is
 end MicroBlazeIP_pwm_gen_0_0_pwm_gen;
 
 architecture STRUCTURE of MicroBlazeIP_pwm_gen_0_0_pwm_gen is
-  signal clear : STD_LOGIC;
+  signal \pwm_cnt[0]_i_1_n_0\ : STD_LOGIC;
   signal \pwm_cnt[0]_i_3_n_0\ : STD_LOGIC;
   signal \pwm_cnt[0]_i_4_n_0\ : STD_LOGIC;
   signal \pwm_cnt[0]_i_5_n_0\ : STD_LOGIC;
+  signal \pwm_cnt[0]_i_6_n_0\ : STD_LOGIC;
+  signal \pwm_cnt[0]_i_7_n_0\ : STD_LOGIC;
   signal pwm_cnt_reg : STD_LOGIC_VECTOR ( 15 downto 0 );
   signal \pwm_cnt_reg[0]_i_2_n_0\ : STD_LOGIC;
   signal \pwm_cnt_reg[0]_i_2_n_1\ : STD_LOGIC;
@@ -64,55 +66,74 @@ architecture STRUCTURE of MicroBlazeIP_pwm_gen_0_0_pwm_gen is
   signal pwm_out_INST_0_i_2_n_0 : STD_LOGIC;
   signal \NLW_pwm_cnt_reg[12]_i_1_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 to 3 );
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \pwm_cnt[0]_i_3\ : label is "soft_lutpair0";
+  attribute SOFT_HLUTNM of \pwm_cnt[0]_i_5\ : label is "soft_lutpair0";
   attribute ADDER_THRESHOLD : integer;
   attribute ADDER_THRESHOLD of \pwm_cnt_reg[0]_i_2\ : label is 11;
   attribute ADDER_THRESHOLD of \pwm_cnt_reg[12]_i_1\ : label is 11;
   attribute ADDER_THRESHOLD of \pwm_cnt_reg[4]_i_1\ : label is 11;
   attribute ADDER_THRESHOLD of \pwm_cnt_reg[8]_i_1\ : label is 11;
-  attribute SOFT_HLUTNM of pwm_out_INST_0_i_2 : label is "soft_lutpair0";
+  attribute SOFT_HLUTNM of pwm_out_INST_0 : label is "soft_lutpair0";
 begin
 \pwm_cnt[0]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"0000FF80FFFFFFFF"
+      INIT => X"FFA8A8A8FFFFFFFF"
     )
         port map (
-      I0 => pwm_cnt_reg(2),
-      I1 => pwm_cnt_reg(1),
-      I2 => pwm_cnt_reg(0),
-      I3 => \pwm_cnt[0]_i_3_n_0\,
-      I4 => \pwm_cnt[0]_i_4_n_0\,
-      I5 => pwm_out_INST_0_i_1_n_0,
-      O => clear
+      I0 => \pwm_cnt[0]_i_3_n_0\,
+      I1 => pwm_out_INST_0_i_1_n_0,
+      I2 => \pwm_cnt[0]_i_4_n_0\,
+      I3 => \pwm_cnt[0]_i_5_n_0\,
+      I4 => pwm_cnt_reg(13),
+      I5 => \pwm_cnt[0]_i_6_n_0\,
+      O => \pwm_cnt[0]_i_1_n_0\
     );
-\pwm_cnt[0]_i_3\: unisim.vcomponents.LUT2
+\pwm_cnt[0]_i_3\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"8000"
+    )
+        port map (
+      I0 => pwm_cnt_reg(8),
+      I1 => pwm_cnt_reg(13),
+      I2 => pwm_cnt_reg(10),
+      I3 => pwm_cnt_reg(9),
+      O => \pwm_cnt[0]_i_3_n_0\
+    );
+\pwm_cnt[0]_i_4\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"8000"
+    )
+        port map (
+      I0 => pwm_cnt_reg(1),
+      I1 => pwm_cnt_reg(0),
+      I2 => pwm_cnt_reg(3),
+      I3 => pwm_cnt_reg(2),
+      O => \pwm_cnt[0]_i_4_n_0\
+    );
+\pwm_cnt[0]_i_5\: unisim.vcomponents.LUT2
     generic map(
       INIT => X"E"
     )
         port map (
-      I0 => pwm_cnt_reg(4),
-      I1 => pwm_cnt_reg(3),
-      O => \pwm_cnt[0]_i_3_n_0\
+      I0 => pwm_cnt_reg(11),
+      I1 => pwm_cnt_reg(12),
+      O => \pwm_cnt[0]_i_5_n_0\
     );
-\pwm_cnt[0]_i_4\: unisim.vcomponents.LUT5
+\pwm_cnt[0]_i_6\: unisim.vcomponents.LUT2
     generic map(
-      INIT => X"7FFFFFFF"
+      INIT => X"1"
     )
         port map (
-      I0 => pwm_cnt_reg(7),
-      I1 => pwm_cnt_reg(8),
-      I2 => pwm_cnt_reg(9),
-      I3 => pwm_cnt_reg(6),
-      I4 => pwm_cnt_reg(5),
-      O => \pwm_cnt[0]_i_4_n_0\
+      I0 => pwm_cnt_reg(14),
+      I1 => pwm_cnt_reg(15),
+      O => \pwm_cnt[0]_i_6_n_0\
     );
-\pwm_cnt[0]_i_5\: unisim.vcomponents.LUT1
+\pwm_cnt[0]_i_7\: unisim.vcomponents.LUT1
     generic map(
       INIT => X"1"
     )
         port map (
       I0 => pwm_cnt_reg(0),
-      O => \pwm_cnt[0]_i_5_n_0\
+      O => \pwm_cnt[0]_i_7_n_0\
     );
 \pwm_cnt_reg[0]\: unisim.vcomponents.FDRE
     generic map(
@@ -123,7 +144,7 @@ begin
       CE => '1',
       D => \pwm_cnt_reg[0]_i_2_n_7\,
       Q => pwm_cnt_reg(0),
-      R => clear
+      R => \pwm_cnt[0]_i_1_n_0\
     );
 \pwm_cnt_reg[0]_i_2\: unisim.vcomponents.CARRY4
      port map (
@@ -139,7 +160,7 @@ begin
       O(1) => \pwm_cnt_reg[0]_i_2_n_6\,
       O(0) => \pwm_cnt_reg[0]_i_2_n_7\,
       S(3 downto 1) => pwm_cnt_reg(3 downto 1),
-      S(0) => \pwm_cnt[0]_i_5_n_0\
+      S(0) => \pwm_cnt[0]_i_7_n_0\
     );
 \pwm_cnt_reg[10]\: unisim.vcomponents.FDRE
     generic map(
@@ -150,7 +171,7 @@ begin
       CE => '1',
       D => \pwm_cnt_reg[8]_i_1_n_5\,
       Q => pwm_cnt_reg(10),
-      R => clear
+      R => \pwm_cnt[0]_i_1_n_0\
     );
 \pwm_cnt_reg[11]\: unisim.vcomponents.FDRE
     generic map(
@@ -161,7 +182,7 @@ begin
       CE => '1',
       D => \pwm_cnt_reg[8]_i_1_n_4\,
       Q => pwm_cnt_reg(11),
-      R => clear
+      R => \pwm_cnt[0]_i_1_n_0\
     );
 \pwm_cnt_reg[12]\: unisim.vcomponents.FDRE
     generic map(
@@ -172,7 +193,7 @@ begin
       CE => '1',
       D => \pwm_cnt_reg[12]_i_1_n_7\,
       Q => pwm_cnt_reg(12),
-      R => clear
+      R => \pwm_cnt[0]_i_1_n_0\
     );
 \pwm_cnt_reg[12]_i_1\: unisim.vcomponents.CARRY4
      port map (
@@ -198,7 +219,7 @@ begin
       CE => '1',
       D => \pwm_cnt_reg[12]_i_1_n_6\,
       Q => pwm_cnt_reg(13),
-      R => clear
+      R => \pwm_cnt[0]_i_1_n_0\
     );
 \pwm_cnt_reg[14]\: unisim.vcomponents.FDRE
     generic map(
@@ -209,7 +230,7 @@ begin
       CE => '1',
       D => \pwm_cnt_reg[12]_i_1_n_5\,
       Q => pwm_cnt_reg(14),
-      R => clear
+      R => \pwm_cnt[0]_i_1_n_0\
     );
 \pwm_cnt_reg[15]\: unisim.vcomponents.FDRE
     generic map(
@@ -220,7 +241,7 @@ begin
       CE => '1',
       D => \pwm_cnt_reg[12]_i_1_n_4\,
       Q => pwm_cnt_reg(15),
-      R => clear
+      R => \pwm_cnt[0]_i_1_n_0\
     );
 \pwm_cnt_reg[1]\: unisim.vcomponents.FDRE
     generic map(
@@ -231,7 +252,7 @@ begin
       CE => '1',
       D => \pwm_cnt_reg[0]_i_2_n_6\,
       Q => pwm_cnt_reg(1),
-      R => clear
+      R => \pwm_cnt[0]_i_1_n_0\
     );
 \pwm_cnt_reg[2]\: unisim.vcomponents.FDRE
     generic map(
@@ -242,7 +263,7 @@ begin
       CE => '1',
       D => \pwm_cnt_reg[0]_i_2_n_5\,
       Q => pwm_cnt_reg(2),
-      R => clear
+      R => \pwm_cnt[0]_i_1_n_0\
     );
 \pwm_cnt_reg[3]\: unisim.vcomponents.FDRE
     generic map(
@@ -253,7 +274,7 @@ begin
       CE => '1',
       D => \pwm_cnt_reg[0]_i_2_n_4\,
       Q => pwm_cnt_reg(3),
-      R => clear
+      R => \pwm_cnt[0]_i_1_n_0\
     );
 \pwm_cnt_reg[4]\: unisim.vcomponents.FDRE
     generic map(
@@ -264,7 +285,7 @@ begin
       CE => '1',
       D => \pwm_cnt_reg[4]_i_1_n_7\,
       Q => pwm_cnt_reg(4),
-      R => clear
+      R => \pwm_cnt[0]_i_1_n_0\
     );
 \pwm_cnt_reg[4]_i_1\: unisim.vcomponents.CARRY4
      port map (
@@ -290,7 +311,7 @@ begin
       CE => '1',
       D => \pwm_cnt_reg[4]_i_1_n_6\,
       Q => pwm_cnt_reg(5),
-      R => clear
+      R => \pwm_cnt[0]_i_1_n_0\
     );
 \pwm_cnt_reg[6]\: unisim.vcomponents.FDRE
     generic map(
@@ -301,7 +322,7 @@ begin
       CE => '1',
       D => \pwm_cnt_reg[4]_i_1_n_5\,
       Q => pwm_cnt_reg(6),
-      R => clear
+      R => \pwm_cnt[0]_i_1_n_0\
     );
 \pwm_cnt_reg[7]\: unisim.vcomponents.FDRE
     generic map(
@@ -312,7 +333,7 @@ begin
       CE => '1',
       D => \pwm_cnt_reg[4]_i_1_n_4\,
       Q => pwm_cnt_reg(7),
-      R => clear
+      R => \pwm_cnt[0]_i_1_n_0\
     );
 \pwm_cnt_reg[8]\: unisim.vcomponents.FDRE
     generic map(
@@ -323,7 +344,7 @@ begin
       CE => '1',
       D => \pwm_cnt_reg[8]_i_1_n_7\,
       Q => pwm_cnt_reg(8),
-      R => clear
+      R => \pwm_cnt[0]_i_1_n_0\
     );
 \pwm_cnt_reg[8]_i_1\: unisim.vcomponents.CARRY4
      port map (
@@ -349,43 +370,42 @@ begin
       CE => '1',
       D => \pwm_cnt_reg[8]_i_1_n_6\,
       Q => pwm_cnt_reg(9),
-      R => clear
+      R => \pwm_cnt[0]_i_1_n_0\
     );
-pwm_out_INST_0: unisim.vcomponents.LUT6
+pwm_out_INST_0: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"0000000000000002"
+      INIT => X"00010000"
     )
         port map (
       I0 => pwm_out_INST_0_i_1_n_0,
-      I1 => pwm_out_INST_0_i_2_n_0,
-      I2 => pwm_cnt_reg(5),
-      I3 => pwm_cnt_reg(6),
-      I4 => pwm_cnt_reg(8),
-      I5 => pwm_cnt_reg(2),
+      I1 => pwm_cnt_reg(12),
+      I2 => pwm_cnt_reg(11),
+      I3 => pwm_cnt_reg(3),
+      I4 => pwm_out_INST_0_i_2_n_0,
       O => pwm_out
     );
-pwm_out_INST_0_i_1: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0000000000000001"
-    )
-        port map (
-      I0 => pwm_cnt_reg(11),
-      I1 => pwm_cnt_reg(10),
-      I2 => pwm_cnt_reg(12),
-      I3 => pwm_cnt_reg(15),
-      I4 => pwm_cnt_reg(13),
-      I5 => pwm_cnt_reg(14),
-      O => pwm_out_INST_0_i_1_n_0
-    );
-pwm_out_INST_0_i_2: unisim.vcomponents.LUT4
+pwm_out_INST_0_i_1: unisim.vcomponents.LUT4
     generic map(
       INIT => X"FFFE"
     )
         port map (
-      I0 => pwm_cnt_reg(3),
+      I0 => pwm_cnt_reg(5),
       I1 => pwm_cnt_reg(4),
       I2 => pwm_cnt_reg(7),
+      I3 => pwm_cnt_reg(6),
+      O => pwm_out_INST_0_i_1_n_0
+    );
+pwm_out_INST_0_i_2: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0000000000000001"
+    )
+        port map (
+      I0 => pwm_cnt_reg(10),
+      I1 => pwm_cnt_reg(13),
+      I2 => pwm_cnt_reg(8),
       I3 => pwm_cnt_reg(9),
+      I4 => pwm_cnt_reg(15),
+      I5 => pwm_cnt_reg(14),
       O => pwm_out_INST_0_i_2_n_0
     );
 end STRUCTURE;
@@ -416,7 +436,7 @@ architecture STRUCTURE of MicroBlazeIP_pwm_gen_0_0 is
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of clk : signal is "xilinx.com:signal:clock:1.0 clk CLK";
   attribute X_INTERFACE_PARAMETER : string;
-  attribute X_INTERFACE_PARAMETER of clk : signal is "XIL_INTERFACENAME clk, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN MicroBlazeIP_sys_clk_i1, INSERT_VIP 0";
+  attribute X_INTERFACE_PARAMETER of clk : signal is "XIL_INTERFACENAME clk, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN MicroBlazeIP_sys_clk_i, INSERT_VIP 0";
 begin
 inst: entity work.MicroBlazeIP_pwm_gen_0_0_pwm_gen
      port map (

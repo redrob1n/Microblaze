@@ -164,6 +164,9 @@
 -makelib xcelium_lib/xil_defaultlib \
   "../../../../MicroBlazeIP.gen/sources_1/bd/MicroBlazeIP/ip/MicroBlazeIP_rst_mig_7series_0_81M_0/sim/MicroBlazeIP_rst_mig_7series_0_81M_0.vhd" \
 -endlib
+-makelib xcelium_lib/xil_defaultlib \
+  "../../../../MicroBlazeIP.gen/sources_1/bd/MicroBlazeIP/ip/MicroBlazeIP_axi_smc_0/bd_0/sim/bd_aa28.v" \
+-endlib
 -makelib xcelium_lib/xlconstant_v1_1_7 \
   "../../../../MicroBlazeIP.gen/sources_1/bd/MicroBlazeIP/ipshared/fcfc/hdl/xlconstant_v1_1_vl_rfs.v" \
 -endlib
@@ -241,9 +244,6 @@
 -makelib xcelium_lib/xil_defaultlib -sv \
   "../../../../MicroBlazeIP.gen/sources_1/bd/MicroBlazeIP/ip/MicroBlazeIP_axi_smc_0/bd_0/ip/ip_28/sim/bd_aa28_m00e_0.sv" \
 -endlib
--makelib xcelium_lib/xil_defaultlib \
-  "../../../../MicroBlazeIP.gen/sources_1/bd/MicroBlazeIP/ip/MicroBlazeIP_axi_smc_0/bd_0/sim/bd_aa28.v" \
--endlib
 -makelib xcelium_lib/axi_infrastructure_v1_1_0 \
   "../../../../MicroBlazeIP.gen/sources_1/bd/MicroBlazeIP/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v" \
 -endlib
@@ -308,6 +308,9 @@
 -makelib xcelium_lib/xil_defaultlib \
   "../../../../MicroBlazeIP.gen/sources_1/bd/MicroBlazeIP/ip/MicroBlazeIP_pwm_gen_0_0/sim/MicroBlazeIP_pwm_gen_0_0.v" \
   "../../../../MicroBlazeIP.gen/sources_1/bd/MicroBlazeIP/sim/MicroBlazeIP.v" \
+  "../../../../MicroBlazeIP.gen/sources_1/bd/MicroBlazeIP/ipshared/59f3/hdl/CustomPWM_v1_0_S00_AXI.v" \
+  "../../../../MicroBlazeIP.gen/sources_1/bd/MicroBlazeIP/ipshared/59f3/hdl/CustomPWM_v1_0.v" \
+  "../../../../MicroBlazeIP.gen/sources_1/bd/MicroBlazeIP/ip/MicroBlazeIP_CustomPWM_0_0/sim/MicroBlazeIP_CustomPWM_0_0.v" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
   glbl.v

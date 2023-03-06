@@ -3,12 +3,12 @@
 // SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
 // Vivado v2022.1 (64-bit)
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-// Created on Wednesday March 01, 2023 - 09:39:06 pm, from:
+// Created on Sunday March 05, 2023 - 07:22:23 pm, from:
 //
 //     Map file     - c:\Users\redrob1n\VivadoProjects\MicroBlazeIP\MicroBlazeIP.gen\sources_1\bd\MicroBlazeIP\MicroBlazeIP.bmm
 //     Data file(s) - c:/Users/redrob1n/VivadoProjects/MicroBlazeIP/MicroBlazeIP.gen/sources_1/bd/MicroBlazeIP/ip/MicroBlazeIP_microblaze_0_0/data/mb_bootloop_le.elf
 //
-// Address space 'MicroBlazeIP_i_microblaze_0.MicroBlazeIP_i_microblaze_0_local_memory_lmb_bram_8K_4_ADDR_SPACE', bit lane [31:0].
+// Address space 'MicroBlazeIP_i_microblaze_0.MicroBlazeIP_i_microblaze_0_local_memory_lmb_bram_8K_2_ADDR_SPACE', bit lane [31:0].
 //
 // Bus width = 32 bits, number of bus blocks = 1.
 

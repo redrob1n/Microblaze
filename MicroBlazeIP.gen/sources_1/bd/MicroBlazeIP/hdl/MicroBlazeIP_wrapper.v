@@ -1,7 +1,7 @@
 //Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-//Date        : Sun Mar  5 18:44:18 2023
+//Date        : Sun Mar  5 19:57:56 2023
 //Host        : DESKTOP-E8T5E0M running 64-bit major release  (build 9200)
 //Command     : generate_target MicroBlazeIP_wrapper.bd
 //Design      : MicroBlazeIP_wrapper
@@ -10,7 +10,11 @@
 `timescale 1 ps / 1 ps
 
 module MicroBlazeIP_wrapper
-   (btn_tri_io,
+   (PWM0_0,
+    PWM1_0,
+    PWM2_0,
+    PWM3_0,
+    btn_tri_io,
     ddr3_sdram_addr,
     ddr3_sdram_ba,
     ddr3_sdram_cas_n,
@@ -34,6 +38,10 @@ module MicroBlazeIP_wrapper
     sys_clk_i,
     usb_uart_rxd,
     usb_uart_txd);
+  output PWM0_0;
+  output PWM1_0;
+  output PWM2_0;
+  output PWM3_0;
   inout [3:0]btn_tri_io;
   output [13:0]ddr3_sdram_addr;
   output [2:0]ddr3_sdram_ba;
@@ -59,6 +67,10 @@ module MicroBlazeIP_wrapper
   input usb_uart_rxd;
   output usb_uart_txd;
 
+  wire PWM0_0;
+  wire PWM1_0;
+  wire PWM2_0;
+  wire PWM3_0;
   wire [0:0]btn_tri_i_0;
   wire [1:1]btn_tri_i_1;
   wire [2:2]btn_tri_i_2;
@@ -106,7 +118,11 @@ module MicroBlazeIP_wrapper
   wire usb_uart_txd;
 
   MicroBlazeIP MicroBlazeIP_i
-       (.btn_tri_i({btn_tri_i_3,btn_tri_i_2,btn_tri_i_1,btn_tri_i_0}),
+       (.PWM0_0(PWM0_0),
+        .PWM1_0(PWM1_0),
+        .PWM2_0(PWM2_0),
+        .PWM3_0(PWM3_0),
+        .btn_tri_i({btn_tri_i_3,btn_tri_i_2,btn_tri_i_1,btn_tri_i_0}),
         .btn_tri_o({btn_tri_o_3,btn_tri_o_2,btn_tri_o_1,btn_tri_o_0}),
         .btn_tri_t({btn_tri_t_3,btn_tri_t_2,btn_tri_t_1,btn_tri_t_0}),
         .ddr3_sdram_addr(ddr3_sdram_addr),

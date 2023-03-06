@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xB2F48B84B8261984",
+      "boundary_crc": "0x595CCFE9425384BA",
       "device": "xc7a100tcsg324-1",
       "gen_directory": "../../../../MicroBlazeIP.gen/sources_1/bd/MicroBlazeIP",
       "name": "MicroBlazeIP",
@@ -36,7 +36,8 @@
       "AXI_GPIO_LED": "",
       "AXI_GPIO_BUTTONS": "",
       "axi_iic_0": "",
-      "pwm_gen_0": ""
+      "pwm_gen_0": "",
+      "CustomPWM_0": ""
     },
     "interface_ports": {
       "ddr3_sdram": {
@@ -155,6 +156,18 @@
         }
       },
       "pwm_out_0": {
+        "direction": "O"
+      },
+      "PWM0_0": {
+        "direction": "O"
+      },
+      "PWM1_0": {
+        "direction": "O"
+      },
+      "PWM2_0": {
+        "direction": "O"
+      },
+      "PWM3_0": {
         "direction": "O"
       }
     },
@@ -1259,6 +1272,17 @@
             "direction": "O"
           }
         }
+      },
+      "CustomPWM_0": {
+        "vlnv": "xilinx.com:user:CustomPWM:1.0",
+        "xci_name": "MicroBlazeIP_CustomPWM_0_0",
+        "xci_path": "ip\\MicroBlazeIP_CustomPWM_0_0\\MicroBlazeIP_CustomPWM_0_0.xci",
+        "inst_hier_path": "CustomPWM_0",
+        "parameters": {
+          "PWM_COUNTER_MAX": {
+            "value": "1024"
+          }
+        }
       }
     },
     "interface_nets": {
@@ -1334,6 +1358,12 @@
           "axi_iic_0/S_AXI"
         ]
       },
+      "microblaze_0_axi_periph_M04_AXI": {
+        "interface_ports": [
+          "microblaze_0_axi_periph/M04_AXI",
+          "CustomPWM_0/S00_AXI"
+        ]
+      },
       "microblaze_0_debug": {
         "interface_ports": [
           "mdm_1/MBDEBUG_0",
@@ -1360,6 +1390,30 @@
       }
     },
     "nets": {
+      "CustomPWM_0_PWM0": {
+        "ports": [
+          "CustomPWM_0/PWM0",
+          "PWM0_0"
+        ]
+      },
+      "CustomPWM_0_PWM1": {
+        "ports": [
+          "CustomPWM_0/PWM1",
+          "PWM1_0"
+        ]
+      },
+      "CustomPWM_0_PWM2": {
+        "ports": [
+          "CustomPWM_0/PWM2",
+          "PWM2_0"
+        ]
+      },
+      "CustomPWM_0_PWM3": {
+        "ports": [
+          "CustomPWM_0/PWM3",
+          "PWM3_0"
+        ]
+      },
       "mdm_1_debug_sys_rst": {
         "ports": [
           "mdm_1/Debug_SYS_Rst",
@@ -1383,7 +1437,8 @@
           "microblaze_0_axi_periph/M02_ACLK",
           "axi_iic_0/s_axi_aclk",
           "microblaze_0_axi_periph/M03_ACLK",
-          "microblaze_0_axi_periph/M04_ACLK"
+          "microblaze_0_axi_periph/M04_ACLK",
+          "CustomPWM_0/s00_axi_aclk"
         ]
       },
       "mig_7series_0_mmcm_locked": {
@@ -1443,7 +1498,8 @@
           "microblaze_0_axi_periph/M02_ARESETN",
           "axi_iic_0/s_axi_aresetn",
           "microblaze_0_axi_periph/M03_ARESETN",
-          "microblaze_0_axi_periph/M04_ARESETN"
+          "microblaze_0_axi_periph/M04_ARESETN",
+          "CustomPWM_0/s00_axi_aresetn"
         ]
       },
       "sys_clk_i_1": {
@@ -1468,6 +1524,13 @@
                 "address_block": "/AXI_GPIO_LED/S_AXI/Reg",
                 "offset": "0x40010000",
                 "range": "64K"
+              },
+              "SEG_CustomPWM_0_S00_AXI_reg": {
+                "address_block": "/CustomPWM_0/S00_AXI/S00_AXI_reg",
+                "offset": "0x44A00000",
+                "range": "64K",
+                "offset_base_param": "C_S00_AXI_BASEADDR",
+                "offset_high_param": "C_S00_AXI_HIGHADDR"
               },
               "SEG_axi_iic_0_Reg": {
                 "address_block": "/axi_iic_0/S_AXI/Reg",

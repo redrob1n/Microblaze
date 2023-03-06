@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-| Date         : Sun Mar  5 18:46:08 2023
+| Date         : Sun Mar  5 19:59:34 2023
 | Host         : DESKTOP-E8T5E0M running 64-bit major release  (build 9200)
 | Command      : report_utilization -file MicroBlazeIP_wrapper_utilization_synth.rpt -pb MicroBlazeIP_wrapper_utilization_synth.pb
 | Design       : MicroBlazeIP_wrapper
@@ -91,7 +91,7 @@ Table of Contents
 +-----------------------------+------+-------+------------+-----------+-------+
 |          Site Type          | Used | Fixed | Prohibited | Available | Util% |
 +-----------------------------+------+-------+------------+-----------+-------+
-| Bonded IOB                  |   14 |     0 |          0 |       210 |  6.67 |
+| Bonded IOB                  |   18 |     0 |          0 |       210 |  8.57 |
 | Bonded IPADs                |    0 |     0 |          0 |         2 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |          0 |         6 |  0.00 |
 | PHASER_REF                  |    0 |     0 |          0 |         6 |  0.00 |
@@ -147,9 +147,9 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
+| OBUF     |   10 |                  IO |
 | IBUF     |    8 |                  IO |
 | OBUFT    |    6 |                  IO |
-| OBUF     |    6 |                  IO |
 +----------+------+---------------------+
 
 
@@ -175,6 +175,7 @@ Table of Contents
 | MicroBlazeIP_axi_iic_0_0             |    1 |
 | MicroBlazeIP_axi_gpio_0_3            |    1 |
 | MicroBlazeIP_axi_gpio_0_2            |    1 |
+| MicroBlazeIP_CustomPWM_0_0           |    1 |
 +--------------------------------------+------+
 
 
