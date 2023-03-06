@@ -1,0 +1,15 @@
+vhdl xil_defaultlib  \
+"../../../../MicroBlazeIP.gen/sources_1/bd/MicroBlazeIP/ip/MicroBlazeIP_microblaze_0_0/sim/MicroBlazeIP_microblaze_0_0.vhd" \
+"../../../../MicroBlazeIP.gen/sources_1/bd/MicroBlazeIP/ip/MicroBlazeIP_dlmb_v10_1/sim/MicroBlazeIP_dlmb_v10_1.vhd" \
+"../../../../MicroBlazeIP.gen/sources_1/bd/MicroBlazeIP/ip/MicroBlazeIP_ilmb_v10_1/sim/MicroBlazeIP_ilmb_v10_1.vhd" \
+"../../../../MicroBlazeIP.gen/sources_1/bd/MicroBlazeIP/ip/MicroBlazeIP_dlmb_bram_if_cntlr_1/sim/MicroBlazeIP_dlmb_bram_if_cntlr_1.vhd" \
+"../../../../MicroBlazeIP.gen/sources_1/bd/MicroBlazeIP/ip/MicroBlazeIP_ilmb_bram_if_cntlr_1/sim/MicroBlazeIP_ilmb_bram_if_cntlr_1.vhd" \
+"../../../../MicroBlazeIP.gen/sources_1/bd/MicroBlazeIP/ip/MicroBlazeIP_mdm_1_1/sim/MicroBlazeIP_mdm_1_1.vhd" \
+"../../../../MicroBlazeIP.gen/sources_1/bd/MicroBlazeIP/ip/MicroBlazeIP_rst_mig_7series_0_81M_0/sim/MicroBlazeIP_rst_mig_7series_0_81M_0.vhd" \
+"../../../../MicroBlazeIP.gen/sources_1/bd/MicroBlazeIP/ip/MicroBlazeIP_axi_smc_0/bd_0/ip/ip_1/sim/bd_aa28_psr_aclk_0.vhd" \
+"../../../../MicroBlazeIP.gen/sources_1/bd/MicroBlazeIP/ip/MicroBlazeIP_axi_uartlite_0_0/sim/MicroBlazeIP_axi_uartlite_0_0.vhd" \
+"../../../../MicroBlazeIP.gen/sources_1/bd/MicroBlazeIP/ip/MicroBlazeIP_axi_gpio_0_2/sim/MicroBlazeIP_axi_gpio_0_2.vhd" \
+"../../../../MicroBlazeIP.gen/sources_1/bd/MicroBlazeIP/ip/MicroBlazeIP_axi_gpio_0_3/sim/MicroBlazeIP_axi_gpio_0_3.vhd" \
+"../../../../MicroBlazeIP.gen/sources_1/bd/MicroBlazeIP/ip/MicroBlazeIP_axi_iic_0_0/sim/MicroBlazeIP_axi_iic_0_0.vhd" \
+
+nosort

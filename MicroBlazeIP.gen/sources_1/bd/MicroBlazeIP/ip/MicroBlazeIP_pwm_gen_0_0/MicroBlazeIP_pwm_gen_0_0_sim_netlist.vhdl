@@ -1,0 +1,446 @@
+-- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+-- --------------------------------------------------------------------------------
+-- Tool Version: Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
+-- Date        : Wed Mar  1 22:22:29 2023
+-- Host        : DESKTOP-E8T5E0M running 64-bit major release  (build 9200)
+-- Command     : write_vhdl -force -mode funcsim
+--               c:/Users/redrob1n/VivadoProjects/MicroBlazeIP/MicroBlazeIP.gen/sources_1/bd/MicroBlazeIP/ip/MicroBlazeIP_pwm_gen_0_0/MicroBlazeIP_pwm_gen_0_0_sim_netlist.vhdl
+-- Design      : MicroBlazeIP_pwm_gen_0_0
+-- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
+--               synthesized. This netlist cannot be used for SDF annotated simulation.
+-- Device      : xc7a100tcsg324-1
+-- --------------------------------------------------------------------------------
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+library UNISIM;
+use UNISIM.VCOMPONENTS.ALL;
+entity MicroBlazeIP_pwm_gen_0_0_pwm_gen is
+  port (
+    pwm_out : out STD_LOGIC;
+    clk : in STD_LOGIC
+  );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of MicroBlazeIP_pwm_gen_0_0_pwm_gen : entity is "pwm_gen";
+end MicroBlazeIP_pwm_gen_0_0_pwm_gen;
+
+architecture STRUCTURE of MicroBlazeIP_pwm_gen_0_0_pwm_gen is
+  signal \pwm_cnt[0]_i_1_n_0\ : STD_LOGIC;
+  signal \pwm_cnt[0]_i_3_n_0\ : STD_LOGIC;
+  signal \pwm_cnt[0]_i_4_n_0\ : STD_LOGIC;
+  signal \pwm_cnt[0]_i_5_n_0\ : STD_LOGIC;
+  signal \pwm_cnt[0]_i_6_n_0\ : STD_LOGIC;
+  signal \pwm_cnt[0]_i_7_n_0\ : STD_LOGIC;
+  signal pwm_cnt_reg : STD_LOGIC_VECTOR ( 15 downto 0 );
+  signal \pwm_cnt_reg[0]_i_2_n_0\ : STD_LOGIC;
+  signal \pwm_cnt_reg[0]_i_2_n_1\ : STD_LOGIC;
+  signal \pwm_cnt_reg[0]_i_2_n_2\ : STD_LOGIC;
+  signal \pwm_cnt_reg[0]_i_2_n_3\ : STD_LOGIC;
+  signal \pwm_cnt_reg[0]_i_2_n_4\ : STD_LOGIC;
+  signal \pwm_cnt_reg[0]_i_2_n_5\ : STD_LOGIC;
+  signal \pwm_cnt_reg[0]_i_2_n_6\ : STD_LOGIC;
+  signal \pwm_cnt_reg[0]_i_2_n_7\ : STD_LOGIC;
+  signal \pwm_cnt_reg[12]_i_1_n_1\ : STD_LOGIC;
+  signal \pwm_cnt_reg[12]_i_1_n_2\ : STD_LOGIC;
+  signal \pwm_cnt_reg[12]_i_1_n_3\ : STD_LOGIC;
+  signal \pwm_cnt_reg[12]_i_1_n_4\ : STD_LOGIC;
+  signal \pwm_cnt_reg[12]_i_1_n_5\ : STD_LOGIC;
+  signal \pwm_cnt_reg[12]_i_1_n_6\ : STD_LOGIC;
+  signal \pwm_cnt_reg[12]_i_1_n_7\ : STD_LOGIC;
+  signal \pwm_cnt_reg[4]_i_1_n_0\ : STD_LOGIC;
+  signal \pwm_cnt_reg[4]_i_1_n_1\ : STD_LOGIC;
+  signal \pwm_cnt_reg[4]_i_1_n_2\ : STD_LOGIC;
+  signal \pwm_cnt_reg[4]_i_1_n_3\ : STD_LOGIC;
+  signal \pwm_cnt_reg[4]_i_1_n_4\ : STD_LOGIC;
+  signal \pwm_cnt_reg[4]_i_1_n_5\ : STD_LOGIC;
+  signal \pwm_cnt_reg[4]_i_1_n_6\ : STD_LOGIC;
+  signal \pwm_cnt_reg[4]_i_1_n_7\ : STD_LOGIC;
+  signal \pwm_cnt_reg[8]_i_1_n_0\ : STD_LOGIC;
+  signal \pwm_cnt_reg[8]_i_1_n_1\ : STD_LOGIC;
+  signal \pwm_cnt_reg[8]_i_1_n_2\ : STD_LOGIC;
+  signal \pwm_cnt_reg[8]_i_1_n_3\ : STD_LOGIC;
+  signal \pwm_cnt_reg[8]_i_1_n_4\ : STD_LOGIC;
+  signal \pwm_cnt_reg[8]_i_1_n_5\ : STD_LOGIC;
+  signal \pwm_cnt_reg[8]_i_1_n_6\ : STD_LOGIC;
+  signal \pwm_cnt_reg[8]_i_1_n_7\ : STD_LOGIC;
+  signal pwm_out_INST_0_i_1_n_0 : STD_LOGIC;
+  signal pwm_out_INST_0_i_2_n_0 : STD_LOGIC;
+  signal \NLW_pwm_cnt_reg[12]_i_1_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 to 3 );
+  attribute SOFT_HLUTNM : string;
+  attribute SOFT_HLUTNM of \pwm_cnt[0]_i_5\ : label is "soft_lutpair0";
+  attribute ADDER_THRESHOLD : integer;
+  attribute ADDER_THRESHOLD of \pwm_cnt_reg[0]_i_2\ : label is 11;
+  attribute ADDER_THRESHOLD of \pwm_cnt_reg[12]_i_1\ : label is 11;
+  attribute ADDER_THRESHOLD of \pwm_cnt_reg[4]_i_1\ : label is 11;
+  attribute ADDER_THRESHOLD of \pwm_cnt_reg[8]_i_1\ : label is 11;
+  attribute SOFT_HLUTNM of pwm_out_INST_0 : label is "soft_lutpair0";
+begin
+\pwm_cnt[0]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFA8A8A8FFFFFFFF"
+    )
+        port map (
+      I0 => \pwm_cnt[0]_i_3_n_0\,
+      I1 => pwm_out_INST_0_i_1_n_0,
+      I2 => \pwm_cnt[0]_i_4_n_0\,
+      I3 => \pwm_cnt[0]_i_5_n_0\,
+      I4 => pwm_cnt_reg(13),
+      I5 => \pwm_cnt[0]_i_6_n_0\,
+      O => \pwm_cnt[0]_i_1_n_0\
+    );
+\pwm_cnt[0]_i_3\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"8000"
+    )
+        port map (
+      I0 => pwm_cnt_reg(8),
+      I1 => pwm_cnt_reg(13),
+      I2 => pwm_cnt_reg(10),
+      I3 => pwm_cnt_reg(9),
+      O => \pwm_cnt[0]_i_3_n_0\
+    );
+\pwm_cnt[0]_i_4\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"8000"
+    )
+        port map (
+      I0 => pwm_cnt_reg(1),
+      I1 => pwm_cnt_reg(0),
+      I2 => pwm_cnt_reg(3),
+      I3 => pwm_cnt_reg(2),
+      O => \pwm_cnt[0]_i_4_n_0\
+    );
+\pwm_cnt[0]_i_5\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"E"
+    )
+        port map (
+      I0 => pwm_cnt_reg(11),
+      I1 => pwm_cnt_reg(12),
+      O => \pwm_cnt[0]_i_5_n_0\
+    );
+\pwm_cnt[0]_i_6\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"1"
+    )
+        port map (
+      I0 => pwm_cnt_reg(14),
+      I1 => pwm_cnt_reg(15),
+      O => \pwm_cnt[0]_i_6_n_0\
+    );
+\pwm_cnt[0]_i_7\: unisim.vcomponents.LUT1
+    generic map(
+      INIT => X"1"
+    )
+        port map (
+      I0 => pwm_cnt_reg(0),
+      O => \pwm_cnt[0]_i_7_n_0\
+    );
+\pwm_cnt_reg[0]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clk,
+      CE => '1',
+      D => \pwm_cnt_reg[0]_i_2_n_7\,
+      Q => pwm_cnt_reg(0),
+      R => \pwm_cnt[0]_i_1_n_0\
+    );
+\pwm_cnt_reg[0]_i_2\: unisim.vcomponents.CARRY4
+     port map (
+      CI => '0',
+      CO(3) => \pwm_cnt_reg[0]_i_2_n_0\,
+      CO(2) => \pwm_cnt_reg[0]_i_2_n_1\,
+      CO(1) => \pwm_cnt_reg[0]_i_2_n_2\,
+      CO(0) => \pwm_cnt_reg[0]_i_2_n_3\,
+      CYINIT => '0',
+      DI(3 downto 0) => B"0001",
+      O(3) => \pwm_cnt_reg[0]_i_2_n_4\,
+      O(2) => \pwm_cnt_reg[0]_i_2_n_5\,
+      O(1) => \pwm_cnt_reg[0]_i_2_n_6\,
+      O(0) => \pwm_cnt_reg[0]_i_2_n_7\,
+      S(3 downto 1) => pwm_cnt_reg(3 downto 1),
+      S(0) => \pwm_cnt[0]_i_7_n_0\
+    );
+\pwm_cnt_reg[10]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clk,
+      CE => '1',
+      D => \pwm_cnt_reg[8]_i_1_n_5\,
+      Q => pwm_cnt_reg(10),
+      R => \pwm_cnt[0]_i_1_n_0\
+    );
+\pwm_cnt_reg[11]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clk,
+      CE => '1',
+      D => \pwm_cnt_reg[8]_i_1_n_4\,
+      Q => pwm_cnt_reg(11),
+      R => \pwm_cnt[0]_i_1_n_0\
+    );
+\pwm_cnt_reg[12]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clk,
+      CE => '1',
+      D => \pwm_cnt_reg[12]_i_1_n_7\,
+      Q => pwm_cnt_reg(12),
+      R => \pwm_cnt[0]_i_1_n_0\
+    );
+\pwm_cnt_reg[12]_i_1\: unisim.vcomponents.CARRY4
+     port map (
+      CI => \pwm_cnt_reg[8]_i_1_n_0\,
+      CO(3) => \NLW_pwm_cnt_reg[12]_i_1_CO_UNCONNECTED\(3),
+      CO(2) => \pwm_cnt_reg[12]_i_1_n_1\,
+      CO(1) => \pwm_cnt_reg[12]_i_1_n_2\,
+      CO(0) => \pwm_cnt_reg[12]_i_1_n_3\,
+      CYINIT => '0',
+      DI(3 downto 0) => B"0000",
+      O(3) => \pwm_cnt_reg[12]_i_1_n_4\,
+      O(2) => \pwm_cnt_reg[12]_i_1_n_5\,
+      O(1) => \pwm_cnt_reg[12]_i_1_n_6\,
+      O(0) => \pwm_cnt_reg[12]_i_1_n_7\,
+      S(3 downto 0) => pwm_cnt_reg(15 downto 12)
+    );
+\pwm_cnt_reg[13]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clk,
+      CE => '1',
+      D => \pwm_cnt_reg[12]_i_1_n_6\,
+      Q => pwm_cnt_reg(13),
+      R => \pwm_cnt[0]_i_1_n_0\
+    );
+\pwm_cnt_reg[14]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clk,
+      CE => '1',
+      D => \pwm_cnt_reg[12]_i_1_n_5\,
+      Q => pwm_cnt_reg(14),
+      R => \pwm_cnt[0]_i_1_n_0\
+    );
+\pwm_cnt_reg[15]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clk,
+      CE => '1',
+      D => \pwm_cnt_reg[12]_i_1_n_4\,
+      Q => pwm_cnt_reg(15),
+      R => \pwm_cnt[0]_i_1_n_0\
+    );
+\pwm_cnt_reg[1]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clk,
+      CE => '1',
+      D => \pwm_cnt_reg[0]_i_2_n_6\,
+      Q => pwm_cnt_reg(1),
+      R => \pwm_cnt[0]_i_1_n_0\
+    );
+\pwm_cnt_reg[2]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clk,
+      CE => '1',
+      D => \pwm_cnt_reg[0]_i_2_n_5\,
+      Q => pwm_cnt_reg(2),
+      R => \pwm_cnt[0]_i_1_n_0\
+    );
+\pwm_cnt_reg[3]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clk,
+      CE => '1',
+      D => \pwm_cnt_reg[0]_i_2_n_4\,
+      Q => pwm_cnt_reg(3),
+      R => \pwm_cnt[0]_i_1_n_0\
+    );
+\pwm_cnt_reg[4]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clk,
+      CE => '1',
+      D => \pwm_cnt_reg[4]_i_1_n_7\,
+      Q => pwm_cnt_reg(4),
+      R => \pwm_cnt[0]_i_1_n_0\
+    );
+\pwm_cnt_reg[4]_i_1\: unisim.vcomponents.CARRY4
+     port map (
+      CI => \pwm_cnt_reg[0]_i_2_n_0\,
+      CO(3) => \pwm_cnt_reg[4]_i_1_n_0\,
+      CO(2) => \pwm_cnt_reg[4]_i_1_n_1\,
+      CO(1) => \pwm_cnt_reg[4]_i_1_n_2\,
+      CO(0) => \pwm_cnt_reg[4]_i_1_n_3\,
+      CYINIT => '0',
+      DI(3 downto 0) => B"0000",
+      O(3) => \pwm_cnt_reg[4]_i_1_n_4\,
+      O(2) => \pwm_cnt_reg[4]_i_1_n_5\,
+      O(1) => \pwm_cnt_reg[4]_i_1_n_6\,
+      O(0) => \pwm_cnt_reg[4]_i_1_n_7\,
+      S(3 downto 0) => pwm_cnt_reg(7 downto 4)
+    );
+\pwm_cnt_reg[5]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clk,
+      CE => '1',
+      D => \pwm_cnt_reg[4]_i_1_n_6\,
+      Q => pwm_cnt_reg(5),
+      R => \pwm_cnt[0]_i_1_n_0\
+    );
+\pwm_cnt_reg[6]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clk,
+      CE => '1',
+      D => \pwm_cnt_reg[4]_i_1_n_5\,
+      Q => pwm_cnt_reg(6),
+      R => \pwm_cnt[0]_i_1_n_0\
+    );
+\pwm_cnt_reg[7]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clk,
+      CE => '1',
+      D => \pwm_cnt_reg[4]_i_1_n_4\,
+      Q => pwm_cnt_reg(7),
+      R => \pwm_cnt[0]_i_1_n_0\
+    );
+\pwm_cnt_reg[8]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clk,
+      CE => '1',
+      D => \pwm_cnt_reg[8]_i_1_n_7\,
+      Q => pwm_cnt_reg(8),
+      R => \pwm_cnt[0]_i_1_n_0\
+    );
+\pwm_cnt_reg[8]_i_1\: unisim.vcomponents.CARRY4
+     port map (
+      CI => \pwm_cnt_reg[4]_i_1_n_0\,
+      CO(3) => \pwm_cnt_reg[8]_i_1_n_0\,
+      CO(2) => \pwm_cnt_reg[8]_i_1_n_1\,
+      CO(1) => \pwm_cnt_reg[8]_i_1_n_2\,
+      CO(0) => \pwm_cnt_reg[8]_i_1_n_3\,
+      CYINIT => '0',
+      DI(3 downto 0) => B"0000",
+      O(3) => \pwm_cnt_reg[8]_i_1_n_4\,
+      O(2) => \pwm_cnt_reg[8]_i_1_n_5\,
+      O(1) => \pwm_cnt_reg[8]_i_1_n_6\,
+      O(0) => \pwm_cnt_reg[8]_i_1_n_7\,
+      S(3 downto 0) => pwm_cnt_reg(11 downto 8)
+    );
+\pwm_cnt_reg[9]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clk,
+      CE => '1',
+      D => \pwm_cnt_reg[8]_i_1_n_6\,
+      Q => pwm_cnt_reg(9),
+      R => \pwm_cnt[0]_i_1_n_0\
+    );
+pwm_out_INST_0: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"00010000"
+    )
+        port map (
+      I0 => pwm_out_INST_0_i_1_n_0,
+      I1 => pwm_cnt_reg(12),
+      I2 => pwm_cnt_reg(11),
+      I3 => pwm_cnt_reg(3),
+      I4 => pwm_out_INST_0_i_2_n_0,
+      O => pwm_out
+    );
+pwm_out_INST_0_i_1: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"FFFE"
+    )
+        port map (
+      I0 => pwm_cnt_reg(5),
+      I1 => pwm_cnt_reg(4),
+      I2 => pwm_cnt_reg(7),
+      I3 => pwm_cnt_reg(6),
+      O => pwm_out_INST_0_i_1_n_0
+    );
+pwm_out_INST_0_i_2: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0000000000000001"
+    )
+        port map (
+      I0 => pwm_cnt_reg(10),
+      I1 => pwm_cnt_reg(13),
+      I2 => pwm_cnt_reg(8),
+      I3 => pwm_cnt_reg(9),
+      I4 => pwm_cnt_reg(15),
+      I5 => pwm_cnt_reg(14),
+      O => pwm_out_INST_0_i_2_n_0
+    );
+end STRUCTURE;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+library UNISIM;
+use UNISIM.VCOMPONENTS.ALL;
+entity MicroBlazeIP_pwm_gen_0_0 is
+  port (
+    clk : in STD_LOGIC;
+    increase_duty : in STD_LOGIC;
+    decrease_duty : in STD_LOGIC;
+    pwm_out : out STD_LOGIC
+  );
+  attribute NotValidForBitStream : boolean;
+  attribute NotValidForBitStream of MicroBlazeIP_pwm_gen_0_0 : entity is true;
+  attribute CHECK_LICENSE_TYPE : string;
+  attribute CHECK_LICENSE_TYPE of MicroBlazeIP_pwm_gen_0_0 : entity is "MicroBlazeIP_pwm_gen_0_0,pwm_gen,{}";
+  attribute DowngradeIPIdentifiedWarnings : string;
+  attribute DowngradeIPIdentifiedWarnings of MicroBlazeIP_pwm_gen_0_0 : entity is "yes";
+  attribute IP_DEFINITION_SOURCE : string;
+  attribute IP_DEFINITION_SOURCE of MicroBlazeIP_pwm_gen_0_0 : entity is "module_ref";
+  attribute X_CORE_INFO : string;
+  attribute X_CORE_INFO of MicroBlazeIP_pwm_gen_0_0 : entity is "pwm_gen,Vivado 2022.1";
+end MicroBlazeIP_pwm_gen_0_0;
+
+architecture STRUCTURE of MicroBlazeIP_pwm_gen_0_0 is
+  attribute X_INTERFACE_INFO : string;
+  attribute X_INTERFACE_INFO of clk : signal is "xilinx.com:signal:clock:1.0 clk CLK";
+  attribute X_INTERFACE_PARAMETER : string;
+  attribute X_INTERFACE_PARAMETER of clk : signal is "XIL_INTERFACENAME clk, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN MicroBlazeIP_sys_clk_i, INSERT_VIP 0";
+begin
+inst: entity work.MicroBlazeIP_pwm_gen_0_0_pwm_gen
+     port map (
+      clk => clk,
+      pwm_out => pwm_out
+    );
+end STRUCTURE;
