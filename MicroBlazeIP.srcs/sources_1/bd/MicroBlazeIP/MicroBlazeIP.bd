@@ -199,6 +199,15 @@
           "C_USE_DCACHE": {
             "value": "1"
           },
+          "C_USE_DIV": {
+            "value": "1"
+          },
+          "C_USE_FPU": {
+            "value": "2"
+          },
+          "C_USE_HW_MUL": {
+            "value": "2"
+          },
           "C_USE_ICACHE": {
             "value": "1"
           }
@@ -1280,7 +1289,7 @@
         "inst_hier_path": "CustomPWM_0",
         "parameters": {
           "PWM_COUNTER_MAX": {
-            "value": "1024"
+            "value": "8100"
           }
         }
       }
